@@ -62,6 +62,7 @@ const preparacionPedido = async () =>{
        const pizzaLista = await pedidoPizza();
        const bebidaLista = await pedidoBebida();
        const postreListo = await pedidoPostre();
+       estatusPedido.innerHTML = `<p>Tu pedido ha sido procesado con exito ✅</p>`;
     }catch(error){
         estatusPedido.innerHTML = `<p>Ocurrio un error con tu pedido, intente nuevamente</p>`;
     }
