@@ -1,0 +1,126 @@
+/* 1. Reseteo y Tipografía */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* 2. Fondo oscuro con destello */
+body {
+    background-color: #080911;
+    background-image: radial-gradient(circle at center, #1a103c 0%, #080911 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* 3. Contenedor Principal */
+#contenedorPrincipal {
+    background: rgba(15, 12, 30, 0.85);
+    border: 2px solid #a124db;
+    border-radius: 20px;
+    padding: 40px 30px;
+    max-width: 450px; /* Lo achicamos un poco de ancho para que la columna se vea más estilizada */
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(161, 36, 219, 0.3), inset 0 0 15px rgba(161, 36, 219, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+/* Título Neón */
+h1 {
+    color: #fff;
+    font-size: 2.3rem;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 5px #fff, 0 0 10px #00d2ff, 0 0 20px #a124db;
+}
+
+/* 4. ¡AQUÍ ESTÁ EL CAMBIO! Contenedor de Alimentos en Vertical */
+#contenedoresComida {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos uno abajo del otro */
+    gap: 15px;              /* Espacio de separación entre las tarjetas */
+    margin-bottom: 30px;
+}
+
+/* 5. Tarjetas Neón individuales adaptadas a la columna */
+#pizza, #bebida, #postre {
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid #00d2ff;
+    border-radius: 12px;
+    padding: 15px 20px;
+    width: 100%;            /* Ahora ocupan todo el ancho disponible del contenedor */
+    font-size: 1.8rem;
+    display: flex;          /* Usamos flex interno para alinear el emoji y el texto */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Mantiene el emoji arriba y tu <p> de estatus abajo */
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 210, 255, 0.2);
+}
+
+/* Hover interactivo */
+#pizza:hover, #bebida:hover, #postre:hover {
+    transform: scale(1.02); /* En vez de flotar hacia arriba, ahora crece sutilmente hacia los lados */
+    border-color: #ff007f;
+    box-shadow: 0 0 20px rgba(255, 0, 127, 0.6);
+}
+
+/* Texto de estatus debajo del emoji */
+#estatusPizza, #estatusBebida, #estatusPostre {
+    font-size: 0.85rem;
+    color: #00d2ff;
+    margin-top: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 0 5px rgba(0, 210, 255, 0.5);
+}
+
+/* 6. Textos Informativos de abajo */
+#estatusPedido, #parrafoPedido {
+    font-size: 1.05rem;
+    color: #e2e8f0;
+    margin: 15px 0;
+}
+
+#parrafoPedido {
+    color: #8a99ad;
+    font-size: 0.85rem;
+    margin-top: 15px;
+}
+
+/* 7. El Botón de Acción */
+#enviarPedido {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #a124db;
+    padding: 14px 35px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 0 15px rgba(161, 36, 219, 0.5), inset 0 0 10px rgba(161, 36, 219, 0.3);
+    text-shadow: 0 0 5px #fff;
+    width: 100%; /* El botón ahora también se ensancha para combinar con la estética de la columna */
+}
+
+#enviarPedido:hover {
+    background-color: #a124db;
+    color: #000;
+    font-weight: 900;
+    box-shadow: 0 0 30px #a124db, 0 0 10px #00d2ff;
+    text-shadow: none;
+}
+
+#enviarPedido:active {
+    transform: scale(0.98);
+}
