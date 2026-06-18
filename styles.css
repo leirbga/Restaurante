@@ -13,6 +13,7 @@ body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     padding: 20px;
 }
@@ -124,3 +125,22 @@ h1 {
 #enviarPedido:active {
     transform: scale(0.98);
 }
+
+#reconocimiento{
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    color: #000000;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+#reconocimiento a{
+    color: #00d2ff;
+    text-decoration: none;
+    font-weight: 600;
+    align-items: center;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 5px rgba(0, 210, 255, 0.3);
+}
+
