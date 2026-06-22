@@ -144,3 +144,8 @@ h1 {
     text-shadow: 0 0 5px rgba(0, 210, 255, 0.3);
 }
 
+.habilitar-btn{
+    pointer-events: none;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
